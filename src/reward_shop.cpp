@@ -21,6 +21,7 @@ script made by talamortis
 #include "GossipDef.h"
 #include "ScriptedCreature.h"
 #include "ScriptedGossip.h"
+#include "Chat.h"
 
 class reward_shop : public CreatureScript
 {
