@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-REWARD_SHOP_PATH_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/" && pwd )"
+MOD_REWARD_SHOP_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/" && pwd )"
 
-DB_CHARACTERS_CUSTOM_PATHS+=(
-	$REWARD_SHOP_PATH_ROOT"/sql/chars-base/"
-)
+source "$MOD_REWARD_SHOP_ROOT/conf/conf.sh.dist"
 
-#
-# UPDATES
-#
-
-DB_CHARACTERS_UPDATE_PATHS+=(
-	$REWARD_SHOP_PATH_ROOT"/sql/chars-updates/"
-)
+if [ -f "$MOD_REWARD_SHOP_ROOT/conf/conf.sh" ]; then
+    source "$MOD_REWARD_SHOP_ROOT/conf/conf.sh"
+fi 
