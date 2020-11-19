@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#
+# CUSTOM
+#
+
+DB_CHARACTERS_CUSTOM_PATHS+=(
+	"$MOD_REWARD_SHOP_ROOT/sql/chars-base/"
+)
+
+DB_WORLD_CUSTOM_PATHS+=(
+    "$MOD_REWARD_SHOP_ROOT/sql/world/"
+) 
+
+#
+# UPDATES
+#
+
+DB_CHARACTERS_UPDATE_PATHS+=(
+	"$MOD_REWARD_SHOP_ROOT/sql/chars-updates/"
+)
