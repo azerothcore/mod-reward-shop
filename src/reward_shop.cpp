@@ -19,6 +19,7 @@ script made by talamortis
 #include "ScriptMgr.h"
 #include "Define.h"
 #include "GossipDef.h"
+#include "ScriptedCreature.h"
 
 class reward_shop : public CreatureScript
 {
