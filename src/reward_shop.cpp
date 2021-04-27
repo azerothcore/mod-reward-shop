@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 Database Actions:
 
@@ -99,7 +99,7 @@ public:
 
     bool OnGossipSelectCode(Player* player, Creature* creature, uint32 /* sender */, uint32, const char* code)
     {
-        uint32 playerguid = player->GetGUID();
+        ObjectGuid playerguid = player->GetGUID();
         std::string playerIP = player->GetSession()->GetRemoteAddress();
         std::string rewardcode = code;
         std::ostringstream messageCode;
@@ -184,7 +184,7 @@ public:
 
         } while (result->NextRow());
 
-        CharacterDatabase.PQuery("UPDATE reward_shop SET status = 1, PlayerGUID = '%u', PlayerIP = '%s' WHERE code = '%s'", playerguid, playerIP.c_str(), rewardcode.c_str());
+        CharacterDatabase.PQuery("UPDATE reward_shop SET status = 1, PlayerGUID = '%u', PlayerIP = '%s' WHERE code = '%s'", playerguid.GetCounter(), playerIP.c_str(), rewardcode.c_str());
         return true;
     }
 
