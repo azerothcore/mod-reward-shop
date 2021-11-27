@@ -106,14 +106,14 @@ public:
         std::string rewardcode = code;
         std::ostringstream messageCode;
         messageCode << "Sorry " << player->GetName() << ", that is not a valid code or has already been redeemed.";
-
-        //check for code
-        QueryResult result = CharacterDatabase.PQuery("SELECT id, action, action_data, quantity, status FROM reward_shop WHERE code = '%s'", rewardcode.c_str());
-
+        
         std::size_t found = rewardcode.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-");
 
         if (found != std::string::npos)
             return false;
+
+        //check for code
+        QueryResult result = CharacterDatabase.PQuery("SELECT id, action, action_data, quantity, status FROM reward_shop WHERE code = '%s'", rewardcode.c_str());
 
         if (!result)
         {
