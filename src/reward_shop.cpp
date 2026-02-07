@@ -82,15 +82,15 @@ public:
             break;
         case 6:
             CharacterDatabase.Query("INSERT INTO `reward_shop` (`action`, `action_data`, `quantity`, `code`, `status`, `PlayerGUID`, `PlayerIP`, `CreatedBy`) VALUES(3, 0, 0, '{}', 0, 0, '0', '{}')", randomcode.str().c_str(), CreatedBy.c_str());
-            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is %s", randomcode.str().c_str());
+            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is {}", randomcode.str());
             break;
         case 7:
             CharacterDatabase.Query("INSERT INTO `reward_shop` (`action`, `action_data`, `quantity`, `code`, `status`, `PlayerGUID`, `PlayerIP`,`CreatedBy`) VALUES(4, 0, 0, '{}', 0, 0, '0', '{}')", randomcode.str().c_str(), CreatedBy.c_str());
-            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is %s", randomcode.str().c_str());
+            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is {}", randomcode.str());
             break;
         case 8:
             CharacterDatabase.Query("INSERT INTO `reward_shop` (`action`, `action_data`, `quantity`, `code`, `status`, `PlayerGUID`, `PlayerIP`, `CreatedBy`) VALUES(5, 0, 0, '{}', 0, 0, '0', '{}')", randomcode.str().c_str(), CreatedBy.c_str());
-            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is %s", randomcode.str().c_str());
+            ChatHandler(player->GetSession()).PSendSysMessage("Code was successfully created your code is {}", randomcode.str());
             break;
         }
         return true;
@@ -162,7 +162,7 @@ public:
                 break;
             case 2: /* Gold */
                 player->ModifyMoney(action_data * 10000);
-                ChatHandler(player->GetSession()).PSendSysMessage("CHAT OUTPUT: Successfully added [%u G]", action_data);
+                ChatHandler(player->GetSession()).PSendSysMessage("CHAT OUTPUT: Successfully added [{} G]", action_data);
                 break;
             case 3: /* Name Change */
                 player->SetAtLoginFlag(AT_LOGIN_RENAME);
