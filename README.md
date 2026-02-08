@@ -33,6 +33,8 @@ AzerothCore v1.0.1+
 
 ### 2) Input the SQL file to the character database.
 
+### 2a) Optional exchange all AC code NPCs: Input the SQL files from the optional folder to the world database. First use the NPC.sql files and then the Spawn.sql.
+
 ### 3) Re-run cmake and launch a clean build of AzerothCore
 
 **That's it.**
