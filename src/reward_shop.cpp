@@ -120,7 +120,7 @@ public:
 
         if (!result)
         {
-            player->PlayDirectSound(9638); // No
+            //player->PlayDirectSound(9638); // No
             creature->Whisper(messageCode.str().c_str(), LANG_UNIVERSAL, player);
             creature->HandleEmoteCommand(EMOTE_ONESHOT_QUESTION);
             SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
@@ -143,7 +143,7 @@ public:
 
             if (status == 1)
             {
-                player->PlayDirectSound(9638); // No
+                //player->PlayDirectSound(9638); // No
                 creature->Whisper(messageCode.str().c_str(), LANG_UNIVERSAL, player);
                 creature->HandleEmoteCommand(EMOTE_ONESHOT_QUESTION);
                 SendGossipMenuFor(player, DEFAULT_GOSSIP_MESSAGE, creature->GetGUID());
