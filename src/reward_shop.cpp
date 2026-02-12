@@ -7,6 +7,7 @@ Database Actions:
 3 = name change
 4 = faction change
 5 = race change
+6 = level up to 80
 
 script made by talamortis
 
