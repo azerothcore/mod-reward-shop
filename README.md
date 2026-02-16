@@ -16,6 +16,7 @@ Database Actions:
 3 = name change
 4 = faction change
 5 = race change
+6 = level up to 80
 
 Upcoming features:
 ### 1) If a person feels like they could make a website to work with this module it will be great i will merge into the source and also give credit.
